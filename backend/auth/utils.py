@@ -1,10 +1,13 @@
 from datetime import datetime, timedelta
 from jose import JWTError, jwt
 from passlib.context import CryptContext
+#import secrets
+#SECRET_KEY = secrets.token_urlsafe(32)
+#print('mi clave',SECRET_KEY)
 
 # Configuración del hashing y JWT
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
-SECRET_KEY = "secret-key-example-change-this"
+SECRET_KEY = "OvHmwitA6vBumuRgas9KEZYJ_bBITieC2W-8RlPwhOY"
 ALGORITHM = "HS256"
 ACCESS_TOKEN_EXPIRE_MINUTES = 60
 

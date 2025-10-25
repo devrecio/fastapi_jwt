@@ -24,6 +24,7 @@ def register(user: UserCreate):
 # Login
 @router.post("/login")
 def login(user: UserLogin):
+    #print("Datos recibidos en /login:", user)
     db_user = fake_users_db.get(user.email)
     if not db_user or not verify_password(user.password, db_user["hashed_password"]):
         raise HTTPException(status_code=401, detail="Credenciales incorrectas")
